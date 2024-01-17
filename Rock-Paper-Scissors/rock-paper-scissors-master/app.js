@@ -83,6 +83,7 @@ function displayWinner(results) {
         } else if (aiWins) {
             resultText.innerText = "you lose";
             resultDivs[1].classList.toggle('winner');
+            scoreNumber.innerText = 0;
         } else {
             resultText.innerText = "draw";
         }
