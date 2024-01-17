@@ -74,19 +74,24 @@ function displayWinner(results) {
 
         if(userWins) {
             resultText.innerText = "you win"
+            resultDivs[0].classList.toggle('winner')
         } else if (aiWins) {
             resultText.innerText = "you lose"
+            resultDivs[1].classList.toggle('winner')
         } else {
             resultText.innerText = "draw"
         }
+
+        resultWinner.classList.toggle('hidden')
+        resultsDiv.classList.toggle('show-winner')
+        
     }, 1000);
 
-    resultWinner.classList.toggle('hidden')
-    resultsDiv.classList.toggle('show-winner')
+    
 }
 
 function isWinner(results) {
-    return results[0].beats == results[1].name;
+    return results[0].beats === results[1].name;
 }
 
 //Show/Hide Rules

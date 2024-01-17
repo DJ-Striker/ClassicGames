@@ -226,10 +226,16 @@ body {
         "you-picked result-winner ai-picked";
 }
 
-.result_winner {
+.winner.choice::after {
+    box-shadow: 0 0 0 40px #293251, 0 0 0 80px #232c4b, 0 0 0 130px #1e2949;
+    opacity: 1; 
+}
+
+.results__winner {
     grid-area: result-winner;
-    display: grid;
     place-items: center;
+    display: grid;
+    
 }
 
 .results_text {
