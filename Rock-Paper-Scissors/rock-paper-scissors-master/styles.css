@@ -212,10 +212,10 @@ body {
     grid-area: ai-title;
 }
 
-.results_results:first-of-type {
+.results_result:first-of-type {
     grid-area: you-picked;
 }
-.results_results:last-of-type {
+.results_result:last-of-type {
     grid-area: ai-picked;
 }
 
@@ -226,12 +226,20 @@ body {
         "you-picked result-winner ai-picked";
 }
 
-.winner.choice::after {
+.winner .choice::after {
     box-shadow: 0 0 0 40px #293251, 0 0 0 80px #232c4b, 0 0 0 130px #1e2949;
-    opacity: 1; 
+    animation: winner 1s ease forwards;
 }
 
-.results__winner {
+@keyframes winner {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.results_winner {
     grid-area: result-winner;
     place-items: center;
     display: grid;
