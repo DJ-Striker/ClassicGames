@@ -73,7 +73,7 @@ body {
 
 .score_title {
     font-size: 1.1rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.1em;
     color: var(--score-text);
 
 }
@@ -310,7 +310,7 @@ body {
 
 .modal_header {
     display: flex;
-    width: 85%;
+    width: 100%;
     justify-content: space-between;
     padding: 2rem 2rem 1rem;
 }
