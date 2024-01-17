@@ -1,5 +1,5 @@
 /* Fonts */
-@import url("https://fonts.google.com/specimen/Barlow+Semi+Condensed:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
 
 /* Variables */
 :root {
@@ -23,13 +23,13 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: 0
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     background: radial-gradient(at top, var(--bg-grad-1), var(--bg-grad-2));
-    min-height: 105vh;
+    min-height: 100vh;
     color: var(--light-text);
     text-transform: uppercase;
 
