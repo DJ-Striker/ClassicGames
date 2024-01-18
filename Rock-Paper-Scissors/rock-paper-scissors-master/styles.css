@@ -28,6 +28,7 @@
 
 body {
     font-family: 'Barlow Semi Condensed', sans-serif;
+    background-repeat: no-repeat   ;
     background: radial-gradient(at top, var(--bg-grad-1), var(--bg-grad-2));
     min-height: 100vh;
     color: var(--light-text);
@@ -48,7 +49,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 150px;
+    height: 20%;
     border: 3px solid var(--outline);
     border-radius: 20px;
     padding: 1rem 1.4rem 1rem 2rem;
@@ -101,7 +102,7 @@ body {
     content: '';
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 80%;
     left: 28%;
     top: 35%;
     background: url(./images/bg-triangle.svg) no-repeat;
