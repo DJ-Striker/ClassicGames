@@ -2,6 +2,8 @@ import turtle
 import random
 import time
 
+delay = 0.1
+
 # Screen
 screen = turtle.Screen()
 screen.title("SNAKE GAME")
@@ -93,7 +95,6 @@ while True:
 
         #Reset Score
         score = 0
-        high_score = 0
 
         #Reset Delay
         delay = 0.1
