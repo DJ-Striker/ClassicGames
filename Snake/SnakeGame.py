@@ -11,6 +11,10 @@ screen.setup(width=600, height=600)
 screen.tracer(0)
 screen.bgcolor("yellow")
 
+#Score
+score = 0
+high_score = 0
+
 # Snake Head
 head = turtle.Turtle()
 head.speed(0)
