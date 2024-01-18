@@ -9,7 +9,7 @@ screen = turtle.Screen()
 screen.title("SNAKE GAME")
 screen.setup(width=600, height=600)
 screen.tracer(0)
-screen.bgcolor("yellow")
+screen.bgcolor("black")
 
 #Score
 score = 0
@@ -19,7 +19,7 @@ high_score = 0
 head = turtle.Turtle()
 head.speed(0)
 head.shape("square")
-head.color("black")
+head.color("red")
 head.penup()
 head.goto(0,0)
 head.direction = "stop"
@@ -28,7 +28,7 @@ head.direction = "stop"
 food = turtle.Turtle()
 food.speed(0)
 food.shape("square")
-food.color("red")
+food.color("white")
 food.penup()
 food.goto(0,100)
 
@@ -39,11 +39,11 @@ segments = []
 sc = turtle.Turtle()
 sc.speed(0)
 sc.shape("square")
-sc.color("black")
+sc.color("white")
 sc.penup()
 sc.hideturtle()
 sc.goto(0,260)
-sc.write("Score: 0 High Score: 0", align = "center", font=("ds-digital", 24, "normal"))
+sc.write("Score: 0  High Score: 0", align = "center", font=("ds-digital", 24, "normal"))
 
 #Functions
 def go_up():
@@ -104,7 +104,7 @@ while True:
         delay = 0.1
 
         sc.clear()
-        sc.write("Score: {} High Score: {}".format(score, high_score), align="center", font=("ds-digital", 24, "normal"))
+        sc.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("ds-digital", 24, "normal"))
     
 
     #Check Collision with food
@@ -117,8 +117,8 @@ while True:
         #Add a new segment to the head
         new_segment = turtle.Turtle()
         new_segment.speed(0)
-        new_segment.shape("Square")
-        new_segment.color("Black")
+        new_segment.shape("square")
+        new_segment.color("red")
         new_segment.penup()
         segments.append(new_segment)
 
@@ -131,7 +131,7 @@ while True:
         if score > high_score:
             high_score = score
         sc.clear()
-        sc.write("Score: {} High Score: {}".format(score, high_score), align="center", font=("ds-digital", 24, "normal"))
+        sc.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("ds-digital", 24, "normal"))
 
     #Move the Segments in reverse order
     for index in range(len(segments)-1,0,-1):
@@ -163,6 +163,5 @@ while True:
 
             #Update the score
             sc.clear()
-            sc.write("Score: {} High Score: {}".format(score, high_score), align="center", font=("ds-digital", 24, "normal"))
+            sc.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("ds-digital", 24, "normal"))
     time.sleep(delay)
-screen.mainloop()
