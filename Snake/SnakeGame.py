@@ -161,4 +161,4 @@ while True:
             sc.clear()
             sc.write("Score: {} High Score: {}".format(score, high_score), align="center", font=("ds-digital", 24, "normal"))
     time.sleep(delay)
-    screen.mainloop()
+screen.mainloop()
