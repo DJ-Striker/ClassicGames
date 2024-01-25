@@ -11,6 +11,24 @@ screen.setup(width=600, height=600)
 screen.tracer(0)
 screen.bgcolor("black")
 
+#Creating a border 
+turtle.speed(5)
+turtle.pensize(4)
+turtle.penup()
+turtle.goto(-280,250)
+turtle.pendown()
+turtle.color("White")
+turtle.forward(550)
+turtle.right(90)
+turtle.forward(500)
+turtle.right(90)
+turtle.forward(550)
+turtle.right(90)
+turtle.forward(500)
+
+turtle.hideturtle()
+
+
 #Score
 score = 0
 high_score = 0
@@ -85,7 +103,7 @@ while True:
     screen.update()
 
     #To check colision with border area
-    if head.xcor()>290 or head.xcor()<-290 or head.ycor()>290 or head.ycor()<-290:
+    if head.xcor()>240 or head.xcor()<-260 or head.ycor()>220 or head.ycor()<-220:
         time.sleep(1)
         head.goto(0,0)
         head.direction = "stop"
@@ -110,8 +128,8 @@ while True:
     #Check Collision with food
     if head.distance(food) < 20:
         #Move the food to random place
-        x = random.randint(-290,290)
-        y = random.randint(-290,290)
+        x = random.randint(-280,260)
+        y = random.randint(-240,240)
         food.goto(x,y)
 
         #Add a new segment to the head
